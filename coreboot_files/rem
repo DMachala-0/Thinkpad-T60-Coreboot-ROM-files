@@ -2,7 +2,8 @@ T60 -> src/northbridge/intel/i945/raminit.c -> DEFAULT_PCI_MMIO_SIZE -> 512
 	-> src/mainboard/lenovo/t60/devicetree.cb -> register "pci_mmio_size" = "512"
 
 T60p -> no change
-	 -> 3.2G only
+     -> 3.2G only
+     -> problem with sata connection lockup after long/random IO ops
 
 vgabios extract
 	-> with each display change load original bios and read vga bios rom
