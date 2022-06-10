@@ -1,0 +1,21 @@
+T60 -> src/northbridge/intel/i945/raminit.c -> DEFAULT_PCI_MMIO_SIZE -> 512
+	-> src/mainboard/lenovo/t60/devicetree.cb -> register "pci_mmio_size" = "512"
+
+T60p -> no change
+	 -> 3.2G only
+
+vgabios extract
+	-> with each display change load original bios and read vga bios rom
+	-> rom is unable to 'switch' between single channel and dual channel LVDS communication
+	(seabios is able but linux is not)(same for T60,T60p)
+
+cat /proc/iomem | grep 'Video ROM' | (read m; m=${m/ :*}; s=${m/-*}; e=${m/*-}; \
+dd if=/dev/mem of=vgabios.bin bs=1c skip=$[0x$s] count=$[$[0x$e]-$[0x$s]+1])
+
+flashrom
+
+flashrom -p serprog:dev=/dev/ttyACM0:4000000 -c MX25L1605 -w build/coreboot.rom
+
+ref:
+https://github.com/dword1511/stm32-vserprog
+https://github.com/bibanon/Coreboot-ThinkPads/wiki/ThinkPad-T60p

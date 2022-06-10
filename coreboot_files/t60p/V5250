@@ -1,0 +1,26 @@
+
+Image 1:
+PCI Expansion ROM Header:
+  Signature: 0x55aa (Ok)
+  CPU unique data: 0x80 0xe9 0x73 0x02 0x00 0x00 0x00 0x00
+                   0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+  Pointer to PCI Data Structure: 0x0234
+
+PCI Data Structure:
+  Signature: 0x50434952 'PCIR' (Ok)
+  Vendor ID: 0x1002
+  Device ID: 0x71d4
+  Vital Product Data:  0x0000
+  PCI Data Structure Length: 0x0018 (24 bytes)
+  PCI Data Structure Revision: 0x00
+  Class Code: 0x030000 (VGA Display controller)
+  Image Length: 0x0080 blocks (65536 bytes)
+  Revision Level of Code/Data: 0x090c
+  Code Type: 0x00 (Intel x86)
+  Last-Image Flag: 0x80 (last image in rom)
+  Reserved: 0x0000
+
+Platform specific data for x86 compliant option rom:
+  Initialization Size: 0x80 (65536 bytes)
+  Entry point for INIT function: 0x279
+
