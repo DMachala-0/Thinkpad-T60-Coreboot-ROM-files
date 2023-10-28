@@ -2,7 +2,7 @@
 Collection of stock BIOS files for thinkpad T60 series with ATI GPUs and Coreboot configs.
 
 
-# T60(x1400 128MB)
+# T60 (x1400 128MB)
 Able to get usable ram to 3.5GB with modification of Coreboot code.
 
 Dont know what will fail/override that memory space.
@@ -13,7 +13,7 @@ Change:
   
   -> src/mainboard/lenovo/t60/devicetree.cb -> register "pci_mmio_size" = "512"
 
-# T60p(v5250 256MB)
+# T60p (v5250 256MB)
 Unable to get more ram from MMIO (fail to boot)
 
 Result:
