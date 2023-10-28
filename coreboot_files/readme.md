@@ -1,1 +1,1 @@
-Folders contains rom files for diffrent displays and vgabios + other unsure roms 
+Folders contains ROM files for diffrent displays and VGABIOS + other unsure ROMs 
