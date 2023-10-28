@@ -49,5 +49,7 @@ Problem with sata connection lockup after long/random IO ops (this is due to lin
 If possible add extension wires from ROM to memory compartment for easier and quicker programming.
 
 ref:
+
 https://github.com/dword1511/stm32-vserprog
+
 https://github.com/bibanon/Coreboot-ThinkPads/wiki/ThinkPad-T60p
